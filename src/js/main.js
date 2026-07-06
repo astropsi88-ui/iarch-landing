@@ -111,7 +111,7 @@ function initChat() {
     addMessage(VIKA_REPLIES[index] || VIKA_REPLIES[0], 'vika');
   };
 
-  addMessage('Привет. Я Вика — демонстрационный образ ArchAI. Можем мягко наметить, какая AI-личность нужна именно вам.', 'vika');
+  addMessage('Обновляется технология — не обнуляется личность.', 'vika');
   CHAT_QUICK_BUTTONS.forEach((label) => {
     const button = document.createElement('button');
     button.type = 'button';
