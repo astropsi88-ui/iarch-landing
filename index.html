@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArchAI — персональные AI-компаньоны с памятью, голосом и характером</title>
+  <meta name="description" content="Индивидуально создаём цифровых компаньонов, напарников, соавторов и личности проектов. Telegram, голос, личная память, резервные копии, сопровождение и перенос на сервер владельца.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <div class="page-glow page-glow--violet"></div>
+  <div class="page-glow page-glow--cyan"></div>
+
+  <header class="site-header" data-header>
+    <nav class="nav container" aria-label="Шапка и меню">
+      <a class="brand" href="#top" aria-label="ArchAI">
+        <span class="brand__mark">A</span>
+        <span class="brand__text">ArchAI</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Открыть меню" aria-controls="mobile-menu" aria-expanded="false" data-menu-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav__links" id="mobile-menu" data-menu>
+        <a href="#vika">Видео и чат Вика</a>
+        <a href="#builds">Четыре карточки</a>
+        <a href="#base">Основа</a>
+        <a href="#process">Процесс создания</a>
+        <a href="#payment">Оплата</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="top" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <p class="eyebrow">Главная идея страницы</p>
+        <h1 id="hero-title">Ваш собственный компаньон, напарник, друг или соавтор</h1>
+        <p class="hero__lead">ArchAI создаёт отдельную цифровую личность для одного человека или одного проекта: с именем, образом, голосом, характером, манерой общения, личной памятью и общей историей.</p>
+        <blockquote class="hero__quote">Обновляется технология — не обнуляется личность.</blockquote>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="differences-title">
+      <div class="container">
+        <p class="eyebrow">Компактная полоса отличий</p>
+        <h2 id="differences-title">Правила текста и подачи</h2>
+        <div class="pill-grid">
+          <span>Не превращать цифровую личность в перечень функций.</span>
+          <span>Сначала говорить о живом присутствии, характере, памяти, голосе и общей истории.</span>
+          <span>Почту, календарь, облачные файлы и документы объединять термином «цифровое пространство».</span>
+          <span>Не обещать «точную копию человека», «абсолютную память», «безлимит» и гарантированный доход.</span>
+          <span>Четыре предложения — это примеры индивидуальной сборки, а не жёсткие тарифы.</span>
+          <span>Вик — лицо ArchAI и демонстрационный пример. Клиент не получает копию Вика.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section vika" id="vika" aria-labelledby="vika-title">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">Видео и чат Вика</p>
+          <h2 id="vika-title">Вик — лицо ArchAI и демонстрационный пример</h2>
+          <p>Использовать одно основное квадратное видео Вика <code>src/video/vik-intro.mp4</code> рядом с чатом. При отсутствии файла показывать премиальную заглушку. Звук всегда выключен по умолчанию и включается только после действия пользователя.</p>
+        </div>
+        <div class="vika-card">
+          <div class="video-shell" data-video-shell>
+            <video class="vika-video" src="src/video/vik-intro.mp4" preload="metadata" playsinline controls aria-label="Видео Вика" data-vika-video></video>
+            <div class="video-fallback" data-video-fallback>
+              <span class="orb"></span>
+              <strong>src/video/vik-intro.mp4</strong>
+              <small>При отсутствии файла показывать премиальную заглушку.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section chat-section" aria-labelledby="chat-title">
+      <div class="container two-col two-col--reverse">
+        <div class="chat" aria-label="Чат Вика">
+          <div class="chat__header"><span class="status-dot"></span><strong>Вик</strong><small>демонстрационный пример</small></div>
+          <div class="chat__messages" data-chat-messages aria-live="polite"></div>
+          <div class="chat__quick" data-chat-quick></div>
+          <form class="chat__form" data-chat-form>
+            <label class="sr-only" for="chat-input">Сообщение</label>
+            <input id="chat-input" data-chat-input type="text" autocomplete="off" placeholder="Вик — лицо ArchAI и демонстрационный пример.">
+            <button class="button button--small" type="submit">CTA</button>
+          </form>
+        </div>
+        <div>
+          <p class="eyebrow">Видео и чат Вика</p>
+          <h2 id="chat-title">Видео и чат Вика</h2>
+          <p>Вик — лицо ArchAI и демонстрационный пример. Клиент не получает копию Вика.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="builds" aria-labelledby="builds-title">
+      <div class="container">
+        <p class="eyebrow">Пояснение о гибких индивидуальных сборках</p>
+        <h2 id="builds-title">Четыре предложения — это примеры индивидуальной сборки, а не жёсткие тарифы.</h2>
+        <div class="build-grid" data-accordion-group>
+          <article class="build-card"><button class="build-card__toggle" aria-expanded="false"><span>COMPANION_CREATE</span><b data-price="companionCreate"></b></button><div class="build-card__body"><p>COMPANION_SUPPORT: <span data-price="companionSupport"></span></p></div></article>
+          <article class="build-card"><button class="build-card__toggle" aria-expanded="false"><span>PARTNER_CREATE</span><b data-price="partnerCreate"></b></button><div class="build-card__body"><p>PARTNER_SUPPORT: <span data-price="partnerSupport"></span></p></div></article>
+          <article class="build-card"><button class="build-card__toggle" aria-expanded="false"><span>COAUTHOR_CREATE</span><b data-price="coauthorCreate"></b></button><div class="build-card__body"><p>COAUTHOR_SUPPORT: <span data-price="coauthorSupport"></span></p></div></article>
+          <article class="build-card"><button class="build-card__toggle" aria-expanded="false"><span>PROJECT_CREATE</span><b data-price="projectCreate"></b></button><div class="build-card__body"><p>PROJECT_SUPPORT: <span data-price="projectSupport"></span></p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cards" id="base" aria-label="Основа любой цифровой личности">
+      <div class="container feature-grid">
+        <article><h2>Основа любой цифровой личности</h2><p>ArchAI создаёт отдельную цифровую личность для одного человека или одного проекта: с именем, образом, голосом, характером, манерой общения, личной памятью и общей историей.</p></article>
+        <article><h2>Голос</h2><p>Голос входит в основу продукта. Премиальный или индивидуальный голос — дополнительная возможность.</p></article>
+        <article><h2>Память и общая история</h2><p>Сначала говорить о живом присутствии, характере, памяти, голосе и общей истории.</p></article>
+        <article><h2>Резервные копии, размещение и перенос</h2><p>С сопровождением ArchAI. Сразу у владельца. Сначала у ArchAI — затем перенос. Использовать формулировку «регулярные резервные копии».</p></article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="extra-title"><div class="container"><p class="eyebrow">Дополнительные возможности</p><h2 id="extra-title">Дополнительные возможности</h2><div class="pill-grid"><span>Почта</span><span>Календарь</span><span>Облачные файлы</span><span>Документы</span><span>Цифровое пространство</span><span>Премиальный или индивидуальный голос</span></div></div></section>
+
+    <section class="section compare" aria-labelledby="compare-title"><div class="container"><h2 id="compare-title">Сравнение с массовой подпиской</h2><div class="compare-grid"><div><h3>Массовая подписка</h3><p>Не обещать «точную копию человека», «абсолютную память», «безлимит» и гарантированный доход.</p></div><div><h3>ArchAI</h3><p>Обновляется технология — не обнуляется личность.</p></div></div></div></section>
+
+    <section class="section" id="process" aria-labelledby="process-title"><div class="container"><p class="eyebrow">Процесс создания</p><h2 id="process-title">Процесс создания</h2><ol class="timeline"><li><strong>Шапка и меню.</strong></li><li><strong>Центральный первый экран.</strong></li><li><strong>Видео и чат Вика.</strong></li><li><strong>Футер и cookie.</strong></li></ol></div></section>
+
+    <section class="section cards" aria-label="Сопровождение и FAQ"><div class="container two-col"><div><h2>Сопровождение</h2><p>COMPANION_SUPPORT: <span data-price="companionSupport"></span>. PARTNER_SUPPORT: <span data-price="partnerSupport"></span>. COAUTHOR_SUPPORT: <span data-price="coauthorSupport"></span>. PROJECT_SUPPORT: <span data-price="projectSupport"></span>.</p></div><div class="faq" data-accordion-group><h2>FAQ</h2><details><summary>Что нельзя обещать?</summary><p>Не обещать «точную копию человека», «абсолютную память», «безлимит» и гарантированный доход.</p></details><details><summary>Кто такой Вик?</summary><p>Вик — лицо ArchAI и демонстрационный пример. Клиент не получает копию Вика.</p></details><details><summary>Как работает звук?</summary><p>Звук всегда выключен по умолчанию и включается только после действия пользователя.</p></details></div></div></section>
+
+    <section class="section svetlana" aria-labelledby="svetlana-title"><div class="container two-col"><div><p class="eyebrow">Светлана</p><h2 id="svetlana-title">Светлана</h2><p><a data-site-link="telegramSvetlana" href="#">telegramSvetlana</a>. <a data-site-link="telegramVik" href="#">telegramVik</a>. <a data-site-link="youtubeVik" href="#">youtubeVik</a>. <a data-site-link="contactEmail" href="#">contactEmail</a>.</p></div><div class="portrait-card"><span>premium human-tech</span><strong>дорогой, тёмный, глубокий, технологичный, живой и человечный</strong></div></div></section>
+
+    <section class="section pricing" id="payment" aria-labelledby="payment-title"><div class="container"><p class="eyebrow">Оплата и юридическая часть</p><h2 id="payment-title">Рабочие цены</h2><div class="price-row"><div><strong data-price="companionCreate"></strong><span>COMPANION_CREATE</span></div><div><strong data-price="partnerCreate"></strong><span>PARTNER_CREATE</span></div><div><strong data-price="projectCreate"></strong><span>PROJECT_CREATE</span></div></div><p class="legal-line">Не обещать «точную копию человека», «абсолютную память», «безлимит» и гарантированный доход.</p></div></section>
+  </main>
+
+  <footer class="footer"><div class="container"><span>ArchAI</span><a data-site-link="telegramSvetlana" href="#">telegramSvetlana</a><a data-site-link="telegramVik" href="#">telegramVik</a><a data-site-link="youtubeVik" href="#">youtubeVik</a></div></footer>
+
+  <aside class="cookie" data-cookie hidden><p>Футер и cookie.</p><button class="button button--small" data-cookie-accept>cookie</button></aside>
+  <script src="src/js/main.js"></script>
+</body>
+</html>
