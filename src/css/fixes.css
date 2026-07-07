@@ -1,0 +1,155 @@
+/* ArchAI preview fixes: modal state, readability, and safer first screen */
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  background:
+    radial-gradient(circle at 18% 8%, rgba(110, 99, 182, 0.22), transparent 34%),
+    radial-gradient(circle at 82% 18%, rgba(90, 174, 186, 0.16), transparent 38%),
+    linear-gradient(180deg, #07101f 0%, #060a16 46%, #0a1222 100%);
+}
+
+body::before {
+  opacity: 0.035;
+}
+
+.site-header {
+  background: rgba(6, 10, 22, 0.86);
+}
+
+.hero {
+  min-height: auto;
+  padding-top: 150px;
+  padding-bottom: 90px;
+}
+
+.hero-inner {
+  padding: 42px 28px;
+  border: 1px solid rgba(196, 202, 212, 0.14);
+  border-radius: 32px;
+  background:
+    linear-gradient(145deg, rgba(247, 243, 248, 0.045), rgba(196, 202, 212, 0.015)),
+    rgba(10, 18, 34, 0.72);
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.30);
+}
+
+.hero-inner.visible,
+.reveal.visible {
+  opacity: 1;
+}
+
+h1,
+h2,
+h3,
+strong,
+b {
+  color: var(--text-main);
+}
+
+p,
+li {
+  color: var(--text-soft);
+}
+
+.lead,
+.strong-line,
+.hero-inner p {
+  color: #e4e9f2;
+}
+
+.eyebrow {
+  color: #95d5dc;
+}
+
+.section {
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+
+.section-head {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.distinctions {
+  margin-top: 0;
+  padding-top: 32px;
+}
+
+.distinctions article,
+.glow-card,
+.cards article,
+.path-cards article,
+.steps article,
+.compare > div,
+.chat-window,
+.modal-panel {
+  background:
+    linear-gradient(145deg, rgba(247, 243, 248, 0.065), rgba(196, 202, 212, 0.018)),
+    rgba(16, 23, 37, 0.94);
+  border-color: rgba(196, 202, 212, 0.22);
+}
+
+.cookie {
+  max-width: 980px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  bottom: 18px;
+  padding: 14px 16px;
+  gap: 14px;
+  background: rgba(16, 23, 37, 0.98);
+}
+
+.cookie p {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.58);
+}
+
+.modal-panel {
+  width: min(760px, calc(100% - 32px));
+  padding: 34px;
+}
+
+.modal-close {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 58px;
+  }
+
+  .hero-inner {
+    padding: 28px 18px;
+  }
+
+  .section {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+  .cookie {
+    width: calc(100% - 24px);
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookie div {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
