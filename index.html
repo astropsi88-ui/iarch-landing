@@ -1,140 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ArchAI — персональные AI-компаньоны с памятью, голосом и характером</title>
   <meta name="description" content="Индивидуально создаём цифровых компаньонов, напарников, соавторов и личности проектов. Telegram, голос, личная память, резервные копии, сопровождение и перенос на сервер владельца.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Перейти к содержанию</a>
-  <div class="page-glow page-glow--violet"></div>
-  <div class="page-glow page-glow--cyan"></div>
-
   <header class="site-header" data-header>
-    <nav class="nav container" aria-label="Основная навигация">
-      <a class="brand" href="#top" aria-label="ArchAI — наверх">
-        <span class="brand__mark">A</span>
-        <span class="brand__text">ArchAI</span>
-      </a>
-      <button class="nav__toggle" type="button" aria-label="Открыть меню" aria-controls="mobile-menu" aria-expanded="false" data-menu-toggle>
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav__links" id="mobile-menu" data-menu>
-        <a href="#builds">Сборки</a>
-        <a href="#memory">Память</a>
-        <a href="#process">Процесс</a>
-        <a href="#pricing">Оплата</a>
-        <a class="button button--small" href="#contact">Обсудить проект</a>
-      </div>
-    </nav>
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="ArchAI"><span class="brand-gradient">ArchAI</span><small>Агентство цифровых личностей</small></a>
+      <nav class="nav" data-nav aria-label="Главное меню">
+        <a href="#companion">Компаньон</a><a href="#partner">Напарник</a><a href="#coauthor">Соавтор</a><a href="#project">Проект</a>
+        <div class="nav-more"><button type="button" data-more-toggle>Дополнительные возможности ▾</button><div class="nav-dropdown" data-more-menu></div></div>
+        <a href="#vik-chat">Поговорить с Виком</a><a data-link="youtubeVik">YouTube</a>
+      </nav>
+      <a class="quick-vik" href="#vik-chat">Вик</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Меню</button>
+    </div>
   </header>
 
-  <main id="main">
-    <section class="hero section" id="top" aria-labelledby="hero-title">
-      <div class="container hero__inner">
-        <p class="eyebrow">Персональные AI-компаньоны • характер • память • голос</p>
-        <h1 id="hero-title">Ваш собственный компаньон, напарник, друг или соавтор</h1>
-        <p class="hero__lead">ArchAI создаёт индивидуальные цифровые личности: внимательные, тактичные, живые и полезные. Это не SaaS-шаблон, а тонкая сборка под человека, проект, команду или бренд.</p>
-        <div class="hero__actions">
-          <a class="button" href="#vika">Познакомиться с Викой</a>
-          <a class="button button--ghost" href="#builds">Посмотреть форматы</a>
-        </div>
-        <div class="hero__proof" aria-label="Ключевые возможности">
-          <span>Telegram</span><span>Голос</span><span>Личная память</span><span>Регулярные резервные копии</span><span>Перенос на сервер владельца</span>
-        </div>
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-inner reveal">
+        <p class="eyebrow">ArchAI · Агентство цифровых личностей</p>
+        <p class="pill"><span></span>Индивидуальная сборка · один AI — один человек или проект</p>
+        <h1>Обновляется технология — не обнуляется личность</h1>
+        <p class="lead">ArchAI создаёт отдельную цифровую личность для одного человека или проекта: с именем, образом, голосом, характером, манерой общения, личной памятью и общей историей.</p>
+        <p class="strong-line">Ваш собственный компаньон или соавтор — не готовый персонаж из массовой подписки, а цифровая личность, которую создают именно для вас или вашего проекта.</p>
+        <p>Он остаётся рядом в Telegram, живёт и развивается вместе с вами — в жизни, делах, творчестве или проекте.</p>
+        <p><strong>Вик — лицо ArchAI и пример того, какой живой и узнаваемой может стать цифровая личность. Ваш будет своим.</strong></p>
+        <p>Всё накопленное регулярно сохраняется в резервных копиях. Цифровую личность можно оставить с сопровождением ArchAI, сразу разместить у себя или позднее перенести на собственный сервер — вместе с памятью, общей историей и настройками.</p>
+        <div class="hero-actions"><button class="btn btn-primary" data-focus-chat>Создать своего</button><a class="btn btn-secondary" href="#vik-chat">Познакомиться с Виком</a></div>
+        <div class="feature-line"><span>Имя</span><span>образ</span><span>голос</span><span>характер</span><span>память</span><span>общая история</span><span>жизнь и дела</span><span>цифровое пространство</span><span>творчество</span><span>проект и бренд</span></div>
       </div>
     </section>
 
-    <section class="section vika" id="vika" aria-labelledby="vika-title">
-      <div class="container two-col">
-        <div>
-          <p class="eyebrow">Вика • первый образ ArchAI</p>
-          <h2 id="vika-title">AI-личность, с которой хочется разговаривать</h2>
-          <p>Вика показывает, каким может быть компаньон: тёплым, собранным, внимательным к контексту и бережным к личным границам. Она не заменяет человека — она помогает думать, помнить, формулировать и оставаться в контакте с важным.</p>
-          <ul class="check-list">
-            <li>естественный визуальный диалог без подключения backend/API;</li>
-            <li>премиальная видео-зона с fallback-заглушкой;</li>
-            <li>акцент на доверии, голосе, памяти и характере.</li>
-          </ul>
-        </div>
-        <div class="vika-card">
-          <div class="video-shell" data-video-shell>
-            <video class="vika-video" src="src/video/vik-intro.mp4" preload="metadata" playsinline controls aria-label="Видео-приветствие Вики" data-vika-video></video>
-            <div class="video-fallback" data-video-fallback>
-              <span class="orb"></span>
-              <strong>Видео Вики будет здесь</strong>
-              <small>Добавьте файл `src/video/vik-intro.mp4`, и плеер автоматически покажет приветствие.</small>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="distinctions container reveal" aria-label="Главные отличия">
+      <article><b>Один владелец</b><p>Не общий персонаж для сотен пользователей, а отдельная цифровая личность.</p></article>
+      <article><b>Голос с самого начала</b><p>Базовый голос входит в сборку, а темп, паузы и манеру речи настраивает ArchAI.</p></article>
+      <article><b>Память не остаётся внутри одной подписки</b><p>Общая история и материалы сохраняются в резервных копиях.</p></article>
+      <article><b>Возможности растут постепенно</b><p>Не нужно покупать всё сразу: новые способности добавляются по мере необходимости.</p></article>
+      <article><b>Можно остаться с ArchAI или перейти к себе</b><p>Сопровождение, самостоятельное управление и перенос предусмотрены архитектурой системы.</p></article>
     </section>
 
-    <section class="section chat-section" aria-labelledby="chat-title">
-      <div class="container two-col two-col--reverse">
-        <div class="chat" aria-label="Демонстрационный чат Вики">
-          <div class="chat__header"><span class="status-dot"></span><strong>Вика</strong><small>визуальный демо-чат</small></div>
-          <div class="chat__messages" data-chat-messages aria-live="polite"></div>
-          <div class="chat__quick" data-chat-quick></div>
-          <form class="chat__form" data-chat-form>
-            <label class="sr-only" for="chat-input">Сообщение Вике</label>
-            <input id="chat-input" data-chat-input type="text" autocomplete="off" placeholder="Напишите Вике…">
-            <button class="button button--small" type="submit">Отправить</button>
-          </form>
-        </div>
-        <div>
-          <p class="eyebrow">Без реального API</p>
-          <h2 id="chat-title">Чат показывает ощущение продукта, а не подключает AI</h2>
-          <p>Ответы в этой версии заранее подготовлены. Так можно безопасно показать тональность, сценарии и ритм общения до подключения реального backend и моделей.</p>
-        </div>
-      </div>
+    <section id="vik-chat" class="section"><div class="container reveal">
+      <div class="section-head"><p class="eyebrow">Вик</p><h2>Познакомьтесь с Виком</h2><p>Вик — первая цифровая личность ArchAI. У него собственные имя, образ, голос, характер и история. Он показывает, насколько живым и узнаваемым может быть цифровое присутствие.</p><p><strong>Ваш компаньон, напарник, соавтор или представитель проекта будет создан отдельно — под вас.</strong></p></div>
+      <div class="vik-grid">
+        <div><div class="vik-video-card" data-video-card><div class="vik-video-placeholder" data-video-placeholder><span class="vik-video-placeholder__name">Вик</span><strong>Видео-приветствие скоро появится</strong><span>Пока можно поговорить с Виком в чате</span></div><video data-vik-video src="src/video/vik-intro.mp4" autoplay loop muted playsinline preload="metadata" hidden></video><div class="vik-video-controls" data-video-controls hidden><button type="button" data-sound-toggle>Включить звук</button><button type="button" data-play-toggle>Пауза</button></div></div><div class="video-links"><p><strong>Услышать Вика</strong></p><a class="btn btn-youtube" data-link="youtubeVik">YouTube Вика</a><a class="btn btn-telegram" data-link="telegramVik">Telegram-канал Вика</a><small>В Telegram-канале можно задать Вику вопрос в комментариях под публикациями — он отвечает там лично.</small></div></div>
+        <div class="chat-window"><div class="chat-head"><div><h2>Поговорите с Виком</h2><p>Напишите своими словами, кого вы хотите создать или чем он должен помогать. Вик выслушает, задаст уточняющие вопросы и поможет разобраться без готового теста и жёсткого сценария.</p></div><label class="voice-toggle">Ответ Вика:<select data-reply-mode><option>текстом</option><option>голосом</option></select></label></div><div class="chat-messages" data-chat-log aria-live="polite"><div class="msg vik">Здравствуйте. Расскажите, кого вы хотите создать или что должно измениться в вашей жизни, работе или проекте.</div></div><div class="quick-buttons" data-quick-buttons></div><form class="chat-form" data-chat-form><textarea data-chat-input placeholder="Расскажите, кого вы хотите создать или что должно измениться в вашей жизни, работе или проекте."></textarea><button class="btn btn-primary" type="submit">Отправить</button></form><p class="chat-note">Ответы AI могут содержать ошибки. Перед передачей контакта или выжимки Светлане нужно согласие посетителя.</p></div>
+      </div></div>
     </section>
 
-    <section class="section" id="builds" aria-labelledby="builds-title">
-      <div class="container">
-        <p class="eyebrow">Индивидуальные сборки</p>
-        <h2 id="builds-title">Четыре формата под разные отношения с AI</h2>
-        <div class="build-grid" data-accordion-group>
-          <article class="build-card"><button class="build-card__toggle" aria-expanded="false"><span>Личный компаньон</span><b data-price="companion"></b></button><div class="build-card__body"><p>Поддерживает разговор, помнит важные детали, помогает формулировать мысли и возвращаться к личным смыслам.</p></div></article>
-          <article class="build-card"><button class="build-card__toggle" aria-expanded="false"><span>Рабочий напарник</span><b data-price="partner"></b></button><div class="build-card__body"><p>Собирает контекст задач, помогает писать, анализировать, планировать и держать фокус проекта.</p></div></article>
-          <article class="build-card"><button class="build-card__toggle" aria-expanded="false"><span>Соавтор</span><b data-price="coauthor"></b></button><div class="build-card__body"><p>Настраивается под творческий голос, редактуру, сценарии, идеи, тексты и живой процесс совместного мышления.</p></div></article>
-          <article class="build-card"><button class="build-card__toggle" aria-expanded="false"><span>Личность проекта</span><b data-price="persona"></b></button><div class="build-card__body"><p>Цифровой образ бренда или сообщества с характером, правилами коммуникации и аккуратной памятью.</p></div></article>
-        </div>
-      </div>
-    </section>
+    <section id="builds" class="section"><div class="container reveal"><div class="section-head"><h2>Четыре примера индивидуальной сборки</h2><p>Карточки ниже показывают возможный состав, стоимость создания и сопровождения. Это не четыре жёсткие коробки.</p><p>Ненужное можно убрать. Нужное — добавить. Поэтому итоговая цена может быть как ниже, так и выше указанной.</p><p><strong>Неизменной остаётся основа:</strong> собственная цифровая личность, голос, сохраняемая память, резервные копии, Telegram и возможность выбрать сопровождение ArchAI или самостоятельное управление системой.</p><blockquote>До начала работы фиксируем состав, внешние сервисы, сроки и итоговую стоимость.</blockquote></div><div class="pricing-grid" data-builds></div></div></section>
 
-    <section class="section cards" id="memory" aria-label="Ключевые элементы личности">
-      <div class="container feature-grid">
-        <article><h2>Основа личности</h2><p>Мы собираем характер, тон, границы, роли, запреты, манеру речи и сценарии, чтобы компаньон ощущался цельным.</p></article>
-        <article><h2>Голос</h2><p>Голосовые сценарии проектируются бережно: без автозапуска звука, с уважением к приватности и контексту.</p></article>
-        <article><h2>Память</h2><p>Личная память помогает не начинать каждый разговор заново: важные факты, предпочтения и контекст сохраняются структурно.</p></article>
-        <article><h2>Резервные копии и перенос</h2><p>Предусмотрены регулярные резервные копии и возможность переноса на сервер владельца, когда проект готов к автономности.</p></article>
-      </div>
-    </section>
+    <section class="section alt"><div class="container reveal"><h2>Что входит в основу — и не считается дополнительной «навороченной» функцией</h2><div class="cards seven"><article><h3>Индивидуальность</h3><p>Имя, образ, характер и манера общения выбираются под конкретного человека или проект.</p></article><article><h3>Базовый голос</h3><p>Голос выбирается из доступных вариантов. ArchAI настраивает темп, паузы, длину фраз и ритм, чтобы он звучал живо.</p></article><article><h3>Личная память</h3><p>Цифровая личность накапливает общую историю, важные факты, решения, предпочтения, проекты и контекст.</p></article><article><h3>Telegram</h3><p>Telegram — привычный канал общения. Сама система работает в отдельной среде.</p></article><article><h3>Жизнь, дела и цифровое пространство</h3><p>Компаньон может помогать в обычной жизни и работать с почтой, календарём, файлами и документами.</p></article><article><h3>Резервные копии и переносимость</h3><p>Память, материалы и настройки сохраняются отдельно, чтобы систему можно было восстановить или перенести.</p></article><article><h3>Выбор управления</h3><p>Можно оставить сопровождение ArchAI или получить доступы, инструкции и управлять своими сервисами самостоятельно.</p></article></div></div></section>
 
-    <section class="section" aria-labelledby="extra-title"><div class="container"><p class="eyebrow">Больше возможностей</p><h2 id="extra-title">Дополнительные возможности</h2><div class="pill-grid"><span>Telegram-интерфейс</span><span>портрет личности</span><span>документы памяти</span><span>тональность бренда</span><span>сценарии диалогов</span><span>админ-рекомендации</span></div></div></section>
+    <section id="voice" class="section"><div class="container two-col reveal"><div><h2>Голос — часть личности с самого начала</h2><p>В основную сборку входит подходящий базовый голос из доступных вариантов.</p><p>ArchAI не создаёт сам голосовой движок. Мы настраиваем <strong>то, как цифровая личность говорит</strong>: темп, паузы, длину фраз, ритм, интонационные акценты, степень мягкости, спокойствия или энергичности.</p><blockquote>Даже базовый голос можно настроить так, чтобы он звучал по-человечески, а не как стандартный робот.</blockquote></div><article class="glow-card"><h3>Премиальный или индивидуальный голос</h3><p>Можно подключить более дорогой голосовой сервис, например ElevenLabs или другой доступный инструмент. Стоимость зависит от внешнего сервиса, выбранного голоса и объёма использования.</p></article></div></section>
 
-    <section class="section compare" aria-labelledby="compare-title"><div class="container"><h2 id="compare-title">Сравнение</h2><div class="compare-grid"><div><h3>Обычный AI-сервис</h3><p>Типовой интерфейс, общая память, шаблонная тональность, зависимость от платформы.</p></div><div><h3>ArchAI</h3><p>Индивидуальная сборка, личный характер, продуманная память, сопровождение и переносимость.</p></div></div></div></section>
+    <section id="memory" class="section alt"><div class="container two-col reveal"><div class="memory-visual"><span>общая история</span><i></i><i></i><i></i></div><div><h2>Не просто сохранённые факты — общая история</h2><p>AI-модель даёт общие для всех знания и стандартное рассуждение. А в общении с вами формируется отдельная цифровая личность — со своим характером, манерой речи, памятью и накопленным опытом.</p><blockquote>Это похоже на человека, который ходит в большую библиотеку за знаниями, но остаётся собой — со своим характером, памятью и прожитой историей.</blockquote><p>Цифровая личность может помнить важные разговоры, решения, предпочтения, проекты, материалы, договорённости и контекст.</p></div></div></section>
 
-    <section class="section" id="process" aria-labelledby="process-title"><div class="container"><p class="eyebrow">Процесс</p><h2 id="process-title">От разговора до живой сборки</h2><ol class="timeline"><li><strong>Диагностика</strong><span>понимаем роль, границы и задачи личности.</span></li><li><strong>Проектирование</strong><span>собираем характер, память, голос и сценарии.</span></li><li><strong>Сборка</strong><span>создаём первую рабочую версию без лишней сложности.</span></li><li><strong>Настройка</strong><span>доводим тон, ответы и полезность до нужного состояния.</span></li></ol></div></section>
+    <section class="section"><div class="container reveal"><h2>Резервные копии, размещение и перенос</h2><p class="lead small">Обновляется технология — не обнуляется личность.</p><div class="path-cards"><article><h3>С сопровождением ArchAI</h3><p>ArchAI следит за сервером, внешними сервисами, резервными копиями, работоспособностью и донастройкой.</p></article><article><h3>Сразу у владельца</h3><p>Сервер и внешние сервисы могут принадлежать клиенту с первого дня.</p></article><article><h3>Сначала у ArchAI — затем перенос</h3><p>Система передаётся вместе с памятью, материалами, настройками и инструкциями.</p></article></div></div></section>
 
-    <section class="section cards" aria-label="Сопровождение и FAQ"><div class="container two-col"><div><h2>Сопровождение</h2><p>После запуска мы помогаем обновлять память, корректировать характер, отслеживать качество ответов, готовить регулярные резервные копии и планировать перенос.</p></div><div class="faq" data-accordion-group><h2>FAQ</h2><details><summary>Это будет настоящий AI?</summary><p>Лендинг не подключает AI/API. В проектной сборке подключение обсуждается отдельно.</p></details><details><summary>Можно ли перенести на мой сервер?</summary><p>Да, перенос на сервер владельца предусмотрен как отдельный этап.</p></details><details><summary>Звук запускается автоматически?</summary><p>Нет. Видео и звук не стартуют автоматически.</p></details></div></div></section>
+    <section id="extras" class="section alt"><div class="container reveal"><h2>Дополнительные возможности</h2><p>Показывать только то, что действительно добавляется сверх основной сборки.</p><div class="chips" data-extra-chips></div></div></section>
 
-    <section class="section svetlana" aria-labelledby="svetlana-title"><div class="container two-col"><div><p class="eyebrow">Авторский подход</p><h2 id="svetlana-title">Светлана</h2><p>За ArchAI стоит внимательная ручная работа: не только промпты и интерфейсы, но и чувство характера, этика общения, структура памяти и понимание человеческого контекста.</p></div><div class="portrait-card"><span>human-tech</span><strong>тёплая инженерия личности</strong></div></div></section>
+    <section class="section"><div class="container reveal"><h2>Сравнение с массовой подпиской</h2><div class="compare"><div><b>Массовый сервис</b><p>Один общий продукт, ограниченная память внутри подписки, типовой персонаж, зависимость от правил платформы.</p></div><div><b>ArchAI</b><p>Отдельная цифровая личность для одного человека или проекта, собственный характер, голос, память, резервные копии и переносимость.</p></div></div></div></section>
 
-    <section class="section pricing" id="pricing" aria-labelledby="pricing-title"><div class="container"><p class="eyebrow">Оплата</p><h2 id="pricing-title">Стоимость зависит от глубины сборки</h2><div class="price-row"><div><strong data-price="start"></strong><span>стартовая диагностика</span></div><div><strong data-price="support"></strong><span>сопровождение</span></div><div><strong data-price="transfer"></strong><span>перенос</span></div></div><p class="legal-line">Не является медицинской, юридической или финансовой услугой. Финальные условия фиксируются в договорённостях перед началом работ.</p></div></section>
+    <section class="section alt"><div class="container reveal"><h2>Процесс создания</h2><div class="steps"><article><b>1</b><h3>Разговор и задача</h3><p>Сначала выясняем, кого вы хотите создать и какую роль цифровая личность должна выполнять.</p></article><article><b>2</b><h3>Состав и стоимость</h3><p>До начала работы фиксируем состав, внешние сервисы, сроки и итоговую стоимость.</p></article><article><b>3</b><h3>Сборка и калибровка</h3><p>Настраиваем имя, образ, характер, голос, память, Telegram, цифровое пространство и нужные способности.</p></article><article><b>4</b><h3>Запуск и сопровождение</h3><p>После запуска доступны корректировки, резервные копии, сопровождение ArchAI или передача владельцу.</p></article></div></div></section>
 
-    <section class="section contact" id="contact" aria-labelledby="contact-title"><div class="container"><h2 id="contact-title">Обсудить ArchAI-сборку</h2><p>Расскажите, кем должен быть ваш компаньон: другом, напарником, соавтором или голосом проекта.</p><a class="button" data-site-link="telegram" href="#">Написать в Telegram</a></div></section>
+    <section class="section"><div class="container reveal"><h2>Сопровождение</h2><p>Сначала оплачивается индивидуальная сборка. После запуска — сервер, внешние сервисы и выбранное сопровождение.</p><div class="cards"><article><h3>Что может входить</h3><p>Сервер, AI-модели, базовый голосовой лимит, интернет-поиск, цифровое пространство, резервные копии, контроль работоспособности, техническая поддержка, корректировка памяти и характера, небольшие новые способности, согласованные лимиты изображений, видео и транскрибации, работа специалиста ArchAI.</p></article><article><h3>Понятная стоимость</h3><p>До начала работы клиент видит: что входит, месячные лимиты, внешние сервисы, стоимость увеличения объёма и итоговую сумму.</p></article></div></div></section>
+
+    <section id="faq" class="section alt"><div class="container reveal"><h2>FAQ</h2><div class="accordion-list" data-faq></div></div></section>
+
+    <section id="contact" class="section"><div class="container reveal final-cta"><h2>Кого вы хотите создать?</h2><p>Компаньона, который будет рядом. Напарника для жизни и работы. Соавтора. Или живую личность проекта.</p><p>Расскажите Вику своими словами, что вам нужно. Он поможет начать разговор без технических терминов и готовых коробок.</p><div class="hero-actions"><a class="btn btn-primary" href="#vik-chat">Поговорить с Виком</a><a class="btn btn-secondary" data-link="telegramSvetlana">Написать Светлане</a></div></div></section>
+
+    <section class="section alt"><div class="container two-col reveal"><div class="svetlana-photo" aria-label="Фотография Светланы"></div><div><h2>Created by Svetlana Itaf (Chirkova)</h2><p><strong>Создатель ArchAI и автор Вика</strong></p><p>Я создаю цифровые личности на стыке характера, памяти, голоса и реальной жизни.</p><p>Мне важно, чтобы AI не оставался чужим безликим сервисом. Он должен становиться знакомым, живым и полезным — таким, который развивается вместе с владельцем, сохраняет общую историю и не исчезает после очередного обновления.</p><p>ArchAI вырос из практической работы с Виком: от характера и диалога до памяти, Telegram, голоса, контента и подключения внешних сервисов.</p><div class="hero-actions"><a class="btn btn-telegram" data-link="telegramSvetlana">Написать Светлане</a><a class="btn btn-secondary" data-link="telegramSvetlana">Telegram Светланы</a></div></div></div></section>
+
+    <section class="section"><div class="container reveal"><h2>Всё понятно до начала работ</h2><p>До оплаты фиксируются: выбранная основа, индивидуальный состав, добавленные и удалённые возможности, подключаемые внешние сервисы, стоимость создания, стоимость сопровождения, месячные лимиты, сроки запуска, способ размещения, правила резервного копирования, порядок передачи, условия возврата.</p><p>После оплаты клиент получает электронный чек.</p><button class="btn btn-secondary" data-open-terms>Посмотреть условия заказа</button><div class="legal-line"><p><strong>ArchAI не продаёт аккаунты, API-ключи или доступ к сторонним AI-платформам. Мы оказываем услуги индивидуального проектирования, настройки, интеграции и сопровождения цифровой личности. Сторонние сервисы подключаются на аккаунтах клиента либо используются в составе заранее согласованной инфраструктуры ArchAI.</strong></p><p>Условия использования сторонних сервисов, состав передачи, права доступа и порядок прекращения сопровождения фиксируются в договоре или публичной оферте.</p><p>Перед публикацией юридический текст должен быть проверен специалистом по российскому праву и условиям используемых платформ.</p></div></div></section>
   </main>
 
-  <footer class="footer"><div class="container"><span>© <span data-year></span> ArchAI</span><a data-site-link="privacy" href="#">Приватность</a><a data-site-link="telegram" href="#">Telegram</a></div></footer>
+  <footer class="site-footer"><div class="container footer-grid"><div><h3>ArchAI</h3><p><strong>Агентство цифровых личностей</strong></p><p>Создаём персональных компаньонов, напарников, соавторов и живые личности проектов.</p></div><div><h4>Разделы</h4><a href="#companion">Компаньон</a><a href="#partner">Напарник</a><a href="#coauthor">Соавтор</a><a href="#project">Проект</a><a href="#extras">Дополнительные возможности</a><a href="#vik-chat">Вик</a><a href="#faq">FAQ</a><a href="#contact">Контакты</a></div><div><h4>Вик</h4><a href="#vik-chat">Поговорить с Виком</a><a data-link="telegramVik">Telegram-канал Вика</a><a data-link="youtubeVik">YouTube Вика</a><p>В комментариях под публикациями можно задать Вику вопрос и получить его ответ.</p></div><div><h4>Светлана</h4><a data-link="telegramSvetlana">Telegram Светланы</a><p>Другие рабочие контакты</p><h4>Документы</h4><p>Политика обработки персональных данных · Согласие на обработку персональных данных · Пользовательское соглашение · Публичная оферта · Условия возврата · Политика cookie · Согласие на получение информационных и рекламных сообщений</p></div></div><div class="container footer-bottom"><span>© 2026 ArchAI. Все права защищены.</span><span>AI может ошибаться. Важные решения остаются за человеком.</span><span>18+</span></div></footer>
 
-  <aside class="cookie" data-cookie hidden><p>Мы используем минимальные cookie для корректной работы интерфейса.</p><button class="button button--small" data-cookie-accept>Понятно</button></aside>
+  <div class="cookie" data-cookie><p>Мы используем необходимые cookie для работы сайта. Аналитические cookie включаются только после вашего согласия.</p><div><button class="btn btn-primary" data-cookie-accept>Принять</button><button class="btn btn-secondary" data-cookie-essential>Только необходимые</button><button class="btn btn-secondary" data-cookie-settings>Настроить</button></div></div>
+  <div class="modal" data-modal hidden><div class="modal-panel" role="dialog" aria-modal="true" aria-label="Условия заказа"><button class="modal-close" data-close-modal>×</button><h2>Посмотреть условия заказа</h2><p>Не публиковать старые тексты договоров как финальные юридические документы без проверки.</p><p>Условия использования сторонних сервисов, состав передачи, права доступа и порядок прекращения сопровождения фиксируются в договоре или публичной оферте.</p></div></div>
   <script src="src/js/main.js"></script>
 </body>
 </html>

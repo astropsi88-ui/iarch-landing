@@ -1,172 +1,42 @@
 const PRICES = {
-  companion: 'от 180 000 ₽',
-  partner: 'от 240 000 ₽',
-  coauthor: 'от 280 000 ₽',
-  persona: 'от 340 000 ₽',
-  start: '30 000 ₽',
-  support: 'от 45 000 ₽/мес',
-  transfer: 'по оценке'
+  COMPANION_CREATE: '19 900 ₽',
+  COMPANION_SUPPORT: 'от 6 900 ₽/мес',
+  PARTNER_CREATE: 'от 39 900 ₽',
+  PARTNER_SUPPORT: 'от 9 900 ₽/мес',
+  COAUTHOR_CREATE: 'от 39 900 ₽',
+  COAUTHOR_SUPPORT: 'от 14 900 ₽/мес',
+  PROJECT_CREATE: 'от 99 000 ₽',
+  PROJECT_SUPPORT: 'от 24 900 ₽/мес'
 };
 
 const SITE_LINKS = {
-  telegram: 'https://t.me/astropsi88',
-  privacy: '#privacy'
+  telegramSvetlana: 'https://t.me/Svetlana_itaf',
+  telegramVik: 'https://t.me/AI_VIK_dialog',
+  youtubeVik: 'https://www.youtube.com/@ai_dialoge/featured',
+  contactEmail: ''
 };
 
-const CHAT_QUICK_BUTTONS = [
-  'Кем может быть мой ArchAI?',
-  'Как устроена память?',
-  'Можно ли сделать голос?',
-  'Что с резервными копиями?'
+const QUICK_CHAT_BUTTONS = ['AI-компаньон', 'Личный ИИ-напарник', 'Цифровой соавтор', 'Личность проекта', 'Не знаю, с чего начать'];
+const EXTRAS = ['Премиальный или индивидуальный голос','Изображения и визуальный стиль','Видеообраз и говорящая голова','Видеокружочки','Создание и публикация контента','AI на сайте или отдельная мини-страница','Общение с аудиторией и комментариями','Несколько персонажей','Дополнительные языки'];
+
+const BUILDS = [
+  {id:'companion', mark:'✦', title:'AI-компаньон', headline:'Свой компаньон рядом — для жизни, дел и общей истории', text:'Он разговаривает текстом и голосом, постепенно узнаёт вас, помогает разобраться в мыслях, собрать день, найти нужное и работать с вашим цифровым пространством.', create:PRICES.COMPANION_CREATE, support:PRICES.COMPANION_SUPPORT, cta:'Создать AI-компаньона', acc:'Что входит в основную сборку', items:['отдельный личный Telegram-бот','отдельная серверная среда','знакомство или установочная анкета','собственное имя','выбранный образ','характер и манера общения','базовый голос из доступных вариантов','настройка темпа, пауз, длины фраз и интонационных акцентов','текстовые и голосовые ответы','личная память и общая история','регулярные резервные копии','интернет-поиск','подключение одного цифрового пространства','работа с почтой, календарём, облачными файлами и документами','три стартовых режима: Разложи мои мысли; Собери мой день; Найди и принеси главное','инструкция','семь дней корректировки после запуска','Цифровое пространство: почта, календарь, облачное хранилище, файлы, документы, заметки']},
+  {id:'partner', title:'Личный ИИ-напарник', headline:'Тот же близкий компаньон — с расширенными рабочими способностями', text:'Он знает не только вас, но и ваши проекты: помогает разбирать задачи, собирать решения из голосовых, работать с материалами, сообщениями и регулярными процессами.', create:PRICES.PARTNER_CREATE, support:PRICES.PARTNER_SUPPORT, cta:'Собрать личного напарника', acc:'Что можно включить', items:['несколько проектов','рабочая память по каждому проекту','подготовка материалов и документов','голосовые сообщения → задачи и план','документ → разбор и следующий шаг','идея → структура проекта','материалы недели → сводка и приоритеты','работа с сообщениями','регулярные сводки','задачи по расписанию','канал, комментарии и обращения','подключение существующего сайта','инструкция и передача','период корректировки']},
+  {id:'coauthor', title:'Цифровой соавтор', headline:'Создаёт вместе с вами, не стирая ваш голос', text:'Он работает с голосовыми, черновиками и материалами, понимает основные темы, сохраняет манеру автора и помогает превращать идеи в тексты, сценарии и регулярный контент.', create:PRICES.COAUTHOR_CREATE, support:PRICES.COAUTHOR_SUPPORT, cta:'Создать цифрового соавтора', acc:'Что может входить', items:['отдельный Telegram-соавтор','интервью','анализ материалов и речи','карта голоса и стиля','основные темы','рубрики и форматы','личная база материалов','работа с голосовыми','черновики публикаций','сценарии коротких видео','идеи на месяц','калибровка','сопровождение контентного ритма','AI-двойник эксперта: цифровой двойник эксперта — на основе его опыта, материалов, методики, манеры речи и голоса']},
+  {id:'project', title:'Цифровая личность проекта', headline:'Живой представитель проекта — в Telegram и на сайте', text:'Она знает материалы проекта, общается с людьми, объясняет продукт, помогает выбрать следующий шаг и передаёт важный разговор владельцу или команде.', create:PRICES.PROJECT_CREATE, support:PRICES.PROJECT_SUPPORT, cta:'Создать личность проекта', acc:'Что может входить', items:['отдельный сервер','Telegram-персонаж проекта','характер и стиль бренда','база знаний','проверенные вопросы и ответы','маршруты разговора','виджет на существующем сайте или отдельная мини-страница','история диалогов','передача разговора человеку','оформление в стиле проекта','тестовые разговоры','аналитика вопросов','обновление материалов','голос и видео в выбранных лимитах']}
 ];
 
-const VIKA_REPLIES = [
-  'Я могу быть спокойным собеседником, рабочим напарником или голосом проекта — роль проектируется под вашу реальность.',
-  'Память собирается структурно: важные факты, предпочтения, контекст и границы, чтобы не начинать каждый разговор заново.',
-  'Голос возможен как отдельный сценарий. Никакой звук не запускается автоматически — только по вашему действию.',
-  'Мы закладываем регулярные резервные копии и возможность переноса на сервер владельца.'
-];
+const FAQ = ['Это подписка на готового персонажа?|Нет. Каждый AI создаётся отдельно для конкретного человека или проекта. Ежемесячная оплата относится к серверу, внешним сервисам и сопровождению уже созданной цифровой личности.','Это будет Вик?|Нет. Вик — лицо ArchAI и демонстрационный пример. Ваш AI получит собственное имя, образ, голос, характер, память и роль.','Можно выбрать имя, внешность и голос?|Да. Имя, образ, характер и манера общения входят в индивидуальную настройку. Базовый голос выбирается из доступных вариантов. Премиальный или индивидуальный голос подключается отдельно.','Что означает «настроить голос»?|ArchAI настраивает не сам голосовой движок, а манеру речи: темп, паузы, длину фраз, ритм и интонационные акценты.','Где живёт цифровая личность?|Telegram — привычный способ общения. Сама система работает в отдельной серверной среде: у ArchAI или на инфраструктуре владельца.','Что такое цифровое пространство?|Почта, календарь, облачные файлы, документы и заметки, с которыми AI может работать по согласованным правилам.','Может ли один компаньон помогать и в жизни, и в работе?|Да. Это одна развивающаяся личность. Сначала она может помогать в повседневных делах, а затем получать рабочие, творческие или публичные способности.','Как формируется память?|Общая AI-модель даёт знания и способность работать с информацией. Личная память формируется из общения, важных фактов, решений, материалов и общей истории владельца.','Что произойдёт после обновления модели или сервиса?|Память, материалы, профиль личности и настройки сохраняются отдельно. При необходимости систему можно восстановить, откалибровать и перенести, не создавая личность заново.','Можно ли получить резервную копию?|Да. Формат, частота и место хранения резервных копий фиксируются до запуска.','Можно ли сразу разместить систему у себя?|Да. Сервер и внешние сервисы могут принадлежать клиенту с первого дня.','Можно сначала работать с ArchAI, а потом перенести систему?|Да. Переносимость закладывается в архитектуру. Система передаётся вместе с памятью, материалами, настройками и инструкциями.','Можно управлять системой самостоятельно?|Да. Владелец может самостоятельно оплачивать сервер и внешние сервисы. ArchAI может провести передачу и базовое обучение либо продолжить сопровождение.','Что входит в ежемесячную оплату?|Сервер, модели, голосовые и другие внешние сервисы в согласованных лимитах, резервные копии, контроль работы, поддержка и выбранные донастройки.','Можно создать AI-двойника эксперта?|Да. Его можно настроить на материалах, опыте, методике, манере речи и голосе эксперта. Это один из дополнительных сценариев, а не обязательная форма продукта.','Может ли цифровая личность общаться с аудиторией?|Да. Её можно подключить к Telegram, сайту, комментариям и обращениям. Важные разговоры она передаёт владельцу или команде.','Может ли AI ошибаться?|Да. Важные финансовые, медицинские, юридические и другие чувствительные решения остаются за человеком.','Можно отказаться от заказа?|До начала сборки заказ можно отменить с полным возвратом. После начала работы возвращается неиспользованная часть оплаты с учётом выполненного этапа и специально оплаченных внешних сервисов. Точный порядок фиксируется в публичной оферте.'];
 
-const $ = (selector, root = document) => root.querySelector(selector);
-const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+function externalizeLinks(){document.querySelectorAll('[data-link]').forEach(a=>{const url=SITE_LINKS[a.dataset.link]; if(url){a.href=url; a.target='_blank'; a.rel='noopener noreferrer';}})}
+function accordion(title, body){return `<div class="accordion"><button type="button" aria-expanded="false"><span>${title}</span><i>+</i></button><div class="accordion-body" hidden>${body}</div></div>`}
+function initContent(){document.querySelector('[data-more-menu]').innerHTML=EXTRAS.map(x=>`<a href="#extras">${x}</a>`).join('');document.querySelector('[data-extra-chips]').innerHTML=EXTRAS.map(x=>`<span>${x}</span>`).join('');document.querySelector('[data-builds]').innerHTML=BUILDS.map(b=>`<article id="${b.id}" class="pricing-card glow-card"><p class="card-kicker">${b.title} ${b.mark||''}</p><h3>${b.headline}</h3><p class="pricing-card__description">${b.text}</p><div class="pricing-card__price"><b>Создание — ${b.create}</b><b>Сопровождение — ${b.support}</b></div><div class="pricing-card__actions"><a class="btn btn-primary" href="#vik-chat">${b.cta}</a></div>${accordion(b.acc, `<ul>${b.items.map(i=>`<li>${i}</li>`).join('')}</ul>`)}</article>`).join('');document.querySelector('[data-faq]').innerHTML=FAQ.map(x=>{const [q,a]=x.split('|');return accordion(q,`<p>${a}</p>`)}).join('');document.querySelector('[data-quick-buttons]').innerHTML=QUICK_CHAT_BUTTONS.map(x=>`<button type="button">${x}</button>`).join('')}
+function initAccordions(){document.addEventListener('click',e=>{const btn=e.target.closest('.accordion>button');if(!btn)return;const body=btn.nextElementSibling;const open=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',String(!open));btn.querySelector('i').textContent=open?'+':'−';body.hidden=open;});}
+function initMenu(){const toggle=document.querySelector('[data-menu-toggle]'),nav=document.querySelector('[data-nav]');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');toggle.setAttribute('aria-expanded',open)});document.addEventListener('click',e=>{if(!e.target.closest('.header-inner'))nav.classList.remove('is-open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')nav.classList.remove('is-open')});nav.addEventListener('click',e=>{if(e.target.matches('a'))nav.classList.remove('is-open')});document.querySelector('[data-more-toggle]').addEventListener('click',()=>document.querySelector('[data-more-menu]').classList.toggle('is-open'));}
+function initChat(){const log=document.querySelector('[data-chat-log]'),form=document.querySelector('[data-chat-form]'),input=document.querySelector('[data-chat-input]');const answer='Я выслушаю вас, помогу разобраться и покажу возможное без готового теста и жёсткого сценария. Если захотите, после вашего согласия можно будет передать Светлане короткую выжимку разговора.';function send(text){if(!text.trim())return;log.insertAdjacentHTML('beforeend',`<div class="msg user">${text}</div><div class="typing">Вик печатает…</div>`);input.value='';setTimeout(()=>{log.querySelector('.typing')?.remove();log.insertAdjacentHTML('beforeend',`<div class="msg vik">${answer}</div>`);log.scrollTop=log.scrollHeight},650)}form.addEventListener('submit',e=>{e.preventDefault();send(input.value)});document.querySelector('[data-quick-buttons]').addEventListener('click',e=>{if(e.target.tagName==='BUTTON')send(e.target.textContent)});document.querySelectorAll('[data-focus-chat]').forEach(b=>b.addEventListener('click',()=>{document.querySelector('#vik-chat').scrollIntoView({behavior:'smooth'});setTimeout(()=>input.focus(),500)}));}
+function initVideo(){const video=document.querySelector('[data-vik-video]'),ph=document.querySelector('[data-video-placeholder]'),controls=document.querySelector('[data-video-controls]'),sound=document.querySelector('[data-sound-toggle]'),play=document.querySelector('[data-play-toggle]');video.addEventListener('canplay',()=>{video.hidden=false;ph.hidden=true;controls.hidden=false;video.muted=true});video.addEventListener('error',()=>{video.hidden=true;ph.hidden=false;controls.hidden=true});sound.addEventListener('click',()=>{video.muted=!video.muted;sound.textContent=video.muted?'Включить звук':'Выключить звук'});play.addEventListener('click',()=>{if(video.paused){video.play();play.textContent='Пауза'}else{video.pause();play.textContent='Воспроизвести'}});}
+function initCookie(){const c=document.querySelector('[data-cookie]');if(localStorage.getItem('archaiCookie'))c.hidden=true;document.querySelectorAll('[data-cookie-accept],[data-cookie-essential],[data-cookie-settings]').forEach(b=>b.addEventListener('click',()=>{localStorage.setItem('archaiCookie',b.textContent);c.hidden=true}))}
+function initModal(){const m=document.querySelector('[data-modal]');document.querySelector('[data-open-terms]').addEventListener('click',()=>{m.hidden=false;document.body.classList.add('no-scroll')});function close(){m.hidden=true;document.body.classList.remove('no-scroll')}document.querySelector('[data-close-modal]').addEventListener('click',close);m.addEventListener('click',e=>{if(e.target===m)close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()})}
+function initReveal(){const io=new IntersectionObserver(entries=>entries.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));}
 
-function setPrices() {
-  $$('[data-price]').forEach((node) => {
-    node.textContent = PRICES[node.dataset.price] || '';
-  });
-}
-
-function setLinks() {
-  $$('[data-site-link]').forEach((node) => {
-    const href = SITE_LINKS[node.dataset.siteLink];
-    if (href) node.setAttribute('href', href);
-  });
-}
-
-function initMenu() {
-  const toggle = $('[data-menu-toggle]');
-  const menu = $('[data-menu]');
-  if (!toggle || !menu) return;
-
-  const closeMenu = () => {
-    menu.classList.remove('is-open');
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Открыть меню');
-  };
-  const openMenu = () => {
-    menu.classList.add('is-open');
-    toggle.setAttribute('aria-expanded', 'true');
-    toggle.setAttribute('aria-label', 'Закрыть меню');
-  };
-
-  toggle.addEventListener('click', () => (menu.classList.contains('is-open') ? closeMenu() : openMenu()));
-  menu.addEventListener('click', (event) => {
-    if (event.target.matches('a')) closeMenu();
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMenu();
-  });
-}
-
-function initVideoFallback() {
-  const video = $('[data-vika-video]');
-  const fallback = $('[data-video-fallback]');
-  if (!video || !fallback) return;
-
-  const showFallback = () => {
-    fallback.hidden = false;
-    video.hidden = true;
-  };
-  const showVideo = () => {
-    fallback.hidden = true;
-    video.hidden = false;
-  };
-
-  video.addEventListener('loadedmetadata', showVideo, { once: true });
-  video.addEventListener('error', showFallback, { once: true });
-  window.setTimeout(() => {
-    if (!video.readyState) showFallback();
-  }, 700);
-}
-
-function initChat() {
-  const messages = $('[data-chat-messages]');
-  const quick = $('[data-chat-quick]');
-  const form = $('[data-chat-form]');
-  const input = $('[data-chat-input]');
-  if (!messages || !quick || !form || !input) return;
-
-  const addMessage = (text, type = 'vika') => {
-    const bubble = document.createElement('div');
-    bubble.className = `msg msg--${type}`;
-    bubble.textContent = text;
-    messages.append(bubble);
-    messages.scrollTop = messages.scrollHeight;
-  };
-  const reply = (seed = '') => {
-    const index = Math.max(0, CHAT_QUICK_BUTTONS.findIndex((item) => seed.includes(item)));
-    addMessage(VIKA_REPLIES[index] || VIKA_REPLIES[0], 'vika');
-  };
-
-  addMessage('Привет. Я Вика — демонстрационный образ ArchAI. Можем мягко наметить, какая AI-личность нужна именно вам.', 'vika');
-  CHAT_QUICK_BUTTONS.forEach((label) => {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.textContent = label;
-    button.addEventListener('click', () => {
-      addMessage(label, 'user');
-      reply(label);
-    });
-    quick.append(button);
-  });
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const text = input.value.trim();
-    if (!text) return;
-    addMessage(text, 'user');
-    input.value = '';
-    reply(text);
-  });
-}
-
-function initAccordions() {
-  $$('.build-card__toggle').forEach((button) => {
-    button.addEventListener('click', () => {
-      const card = button.closest('.build-card');
-      const isOpen = card.classList.toggle('is-open');
-      button.setAttribute('aria-expanded', String(isOpen));
-    });
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key !== 'Escape') return;
-    $$('.build-card.is-open').forEach((card) => {
-      card.classList.remove('is-open');
-      $('.build-card__toggle', card)?.setAttribute('aria-expanded', 'false');
-    });
-    $$('details[open]').forEach((detail) => detail.removeAttribute('open'));
-  });
-}
-
-function initCookie() {
-  const banner = $('[data-cookie]');
-  const accept = $('[data-cookie-accept]');
-  if (!banner || !accept) return;
-  if (localStorage.getItem('archai_cookie_ok') !== 'yes') banner.hidden = false;
-  accept.addEventListener('click', () => {
-    localStorage.setItem('archai_cookie_ok', 'yes');
-    banner.hidden = true;
-  });
-}
-
-function init() {
-  setPrices();
-  setLinks();
-  initMenu();
-  initVideoFallback();
-  initChat();
-  initAccordions();
-  initCookie();
-  $('[data-year]').textContent = new Date().getFullYear();
-}
-
-document.addEventListener('DOMContentLoaded', init);
+initContent();externalizeLinks();initAccordions();initMenu();initChat();initVideo();initCookie();initModal();initReveal();
